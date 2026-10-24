@@ -1,0 +1,15 @@
+[workspace]
+members = ["crates/syscon-core", "crates/syscon-diagnostics", "crates/syscon-gui"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[workspace.dependencies]
+eframe = "0.31"
+egui = "0.31"
+serde = { version = "1", features = ["derive"] }
+serialport = { version = "4.7", default-features = false }
+

@@ -1,0 +1,16 @@
+[package]
+name = "syscon-gui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[features]
+default = ["mock"]
+mock = ["syscon-core/mock"]
+
+[dependencies]
+eframe.workspace = true
+egui.workspace = true
+syscon-core = { path = "../syscon-core", default-features = false }
+syscon-diagnostics = { path = "../syscon-diagnostics" }
+

@@ -49,6 +49,12 @@ Run all tests:
 cargo test --workspace
 ```
 
+The repository's `CI` GitHub Actions workflow runs formatting, tests, Clippy,
+and a hardware-only build on Linux, macOS, and Windows for every push and pull
+request. It can also be started manually. Each job uploads its hardware-only
+release executable as a build artifact retained for 14 days; the mock feature
+is intentionally omitted from those release binaries.
+
 On Linux, serial-device access may require membership in the distribution's
 serial-port group (often `dialout`).
 
@@ -145,8 +151,8 @@ Decoder entries and format notes cite:
 
 - [PS3 Developer Wiki: Syscon Error Codes](https://www.psdevwiki.com/ps3/Syscon_Error_Codes)
 - [PS3 Developer Wiki: Error Codes](https://www.psdevwiki.com/ps3/Error_Codes)
-- [db260179/ps3syscon reference implementation](https://github.com/db260179/ps3syscon/blob/master/Linux/ps3_syscon_uart_script.py)
-- [Board connection-point collection](https://github.com/db260179/ps3syscon/tree/master/PS3-Serial-Connection-Points)
+- [db260179/ps3syscon reference implementation](https://github.com/db260179/ps3syscon/blob/81cc667de930d489aa6ea9b4e87d0197d119511c/Linux/ps3_syscon_uart_script.py)
+- [Board connection-point collection](https://github.com/db260179/ps3syscon/tree/81cc667de930d489aa6ea9b4e87d0197d119511c/PS3-Serial-Connection-Points)
 
 These are community-maintained sources. The UI links every known decoded entry
 to its source. Contributions should preserve provenance and avoid turning
